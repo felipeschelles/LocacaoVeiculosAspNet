@@ -1,0 +1,69 @@
+﻿@model IEnumerable<LocacaoVeiculos.Models.Locacao>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model._Cliente.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._Usuario.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._Veiculo.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DtRetirada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DtDevolucao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observacoes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Opcionais)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item._Cliente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item._Usuario.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item._Veiculo.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DtRetirada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DtDevolucao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observacoes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Opcionais)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LocacaoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LocacaoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LocacaoId })
+        </td>
+    </tr>
+}
+
+</table>

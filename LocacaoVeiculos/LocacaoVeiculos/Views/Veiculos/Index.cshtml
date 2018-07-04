@@ -1,0 +1,75 @@
+﻿@model IEnumerable<LocacaoVeiculos.Models.Veiculo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model._Combustivel.combustivel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._Cor.cor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._Marca.marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model._Tipo.tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ano)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Detalhes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Versao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item._Combustivel.combustivel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item._Cor.cor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item._Marca.marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item._Tipo.tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ano)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Detalhes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Versao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VeiculoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VeiculoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VeiculoID })
+        </td>
+    </tr>
+}
+
+</table>

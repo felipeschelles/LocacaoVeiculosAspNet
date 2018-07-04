@@ -1,0 +1,74 @@
+﻿@model LocacaoVeiculos.Models.Locacao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Locacao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model._Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._Usuario.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Usuario.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model._Veiculo.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model._Veiculo.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtRetirada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtRetirada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DtDevolucao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DtDevolucao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacoes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Opcionais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Opcionais)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LocacaoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
